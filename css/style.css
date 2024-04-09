@@ -70,17 +70,42 @@ main .mainSec .mainTitle h3 {
   color: #1B6DC5;
   text-transform: uppercase;
   letter-spacing: -0.05em;
+  position: relative;
+  z-index: 1;
 }
 main .mainSec .mainTitle h2 {
   text-align: right;
   font-family: "Olivera", serif;
   font-size: 140px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 main .mainSec .mainTitle .lineCircle {
   position: absolute;
   left: calc(50% - 560px);
   top: calc(60% - 240px);
+}
+main .mainSec .mainTitle .lineCircle .deco {
+  position: absolute;
+  transition: 3s 0.3s;
+}
+main .mainSec .mainTitle .lineCircle .deco.star {
+  bottom: 0;
+  left: 0;
+  transform: rotate(0deg);
+  animation: rotate 2s infinite linear;
+}
+main .mainSec .mainTitle .lineCircle .deco.flame {
+  top: 0;
+  right: 0;
+  transform: rotate(0deg);
+  animation: rotate 5s infinite linear;
+}
+main .mainSec .mainTitle .lineCircle .deco.colour {
+  left: 50%;
+  bottom: 0;
+  mix-blend-mode: multiply;
 }
 main .mainSec .mainTitle .lineCircle svg {
   animation: dashLine 5s forwards;
@@ -116,9 +141,17 @@ main .right_fixed {
     stroke-dashoffset: 2525;
   }
   50% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: -2525;
   }
   100% {
     stroke-dashoffset: -5050;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=style.css.map */

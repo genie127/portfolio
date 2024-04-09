@@ -57,9 +57,14 @@ header{
 main{
     .mainSec{        
         .mainTitle{padding: 330px 0 200px; width:950px; max-width: calc(100% - 30px); margin: 0 auto; position: relative;
-            h3{@include f_lex(45px); color:$pointColor; text-transform: uppercase; letter-spacing: -.05em;}
-            h2{text-align: right; @include f_oli(140px); text-transform: uppercase;}
-                .lineCircle{position: absolute; left: calc(50% - 560px); top: calc(60% - 240px); 
+            h3{@include f_lex(45px); color:$pointColor; text-transform: uppercase; letter-spacing: -.05em; position: relative; z-index: 1;}
+            h2{text-align: right; @include f_oli(140px); text-transform: uppercase; position: relative; z-index: 1;}
+            .lineCircle{position: absolute; left: calc(50% - 560px); top: calc(60% - 240px);
+                .deco{position: absolute;transition:3s .3s; 
+                    &.star{bottom: 0; left: 0; transform:rotate(0deg); animation: rotate 2s infinite linear; }
+                    &.flame{top: 0; right: 0; transform:rotate(0deg); animation: rotate 5s infinite linear; }
+                    &.colour{left: 50%;bottom: 0; mix-blend-mode:multiply ;}
+                } 
                 svg{
                     animation:dashLine 5s forwards; stroke-dashoffset: 2525; stroke-dasharray: 2525;
                 }
@@ -77,6 +82,12 @@ main{
 
 @keyframes dashLine {
     0%{stroke-dashoffset: 2525; }
-    50%{stroke-dashoffset: 0; }
-    100%{stroke-dashoffset: -5050; }
+    50%{stroke-dashoffset: -2525;}
+    100%{stroke-dashoffset: -5050;}
+}
+
+@keyframes rotate {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+    
 }
