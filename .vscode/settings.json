@@ -1,0 +1,7 @@
+{
+    //"liveSassCompile.settings.forceBaseDirectory": "",
+    "liveSassCompile.settings.formats": [{
+        "savePath" :"./css"
+    }],
+
+}

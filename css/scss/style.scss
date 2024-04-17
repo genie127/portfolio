@@ -3,8 +3,8 @@
 
 @font-face {
     font-family: 'Olivera';
-    src: url('Olivera.woff2') format('woff2'),
-        url('Olivera.woff') format('woff');
+    src: url('../../fonts/Olivera.woff2') format('woff2'),
+        url('../../fonts/Olivera.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -42,52 +42,156 @@ body{background: url(../img/background.jpg) no-repeat center center/cover; min-h
     &.wide{width: 1830px;}
 }
 
-header{
+header{ position: fixed; z-index: 10; top: 0; right: 0; left: 0;
     > div{display: flex; justify-content: space-between; align-items: center;}
     h1{@include f_ab(36px); opacity:0}
     .mainMenu{
         ul{display: flex;
             li{ 
-            &+li{margin-left: 75px;}
+            &+li{margin-left: 50px;}
                 a{display: block; @include f_lex(18px); padding: 24px 0; letter-spacing: -0.14em;}
+                &.active{ 
+                    a{color:$pointColor; font-weight:600;position: relative;
+                        &:after{content:''; display: block; width: 100%; height: 2px; background: $pointColor; position: absolute; top: 18px; left: 0; right: 0;}
+                    }
+                }
             }
+            
         }
     }
 }
 main{
-    .mainSec{        
-        .mainTitle{padding: 330px 0 200px; width:950px; max-width: calc(100% - 30px); margin: 0 auto; position: relative;
-            h3{@include f_lex(45px); color:$pointColor; text-transform: uppercase; letter-spacing: -.05em; position: relative; z-index: 1;}
-            h2{text-align: right; @include f_oli(140px); text-transform: uppercase; position: relative; z-index: 1;}
-            .lineCircle{position: absolute; left: calc(50% - 560px); top: calc(60% - 240px);
+    .secTt{@include f_oli(80px); text-align: right;}
+    .mainSec{position: relative;
+        .mainTitle{padding: 33vh 0; width:900px; max-width: calc(100% - 30px); margin: 0 auto; position: relative;
+            h3{@include f_lex(40px); color:$pointColor; text-transform: uppercase; letter-spacing: -.05em; position: relative; z-index: 1;}
+            h2{text-align: right; @include f_oli(120px); text-transform: uppercase; position: relative; z-index: 1; text-shadow: 0px 4px 4px rgba(0,0,0,.3); margin-top: 25px;}
+            .lineCircle{position: absolute; left: calc(50% - 560px); top:calc(50% - 230px); max-width:100%;
                 .deco{position: absolute;transition:3s .3s; 
-                    &.star{bottom: 0; left: 0; transform:rotate(0deg); animation: rotate 2s infinite linear; }
-                    &.flame{top: 0; right: 0; transform:rotate(0deg); animation: rotate 5s infinite linear; }
+                    &.star{bottom: 0; left: 0; transform:rotate(0deg); animation: rotate 3s infinite linear; }
+                    &.flame{top: 0; right: 0; transform:rotate(0deg); animation: rotate_r 8s infinite linear; mix-blend-mode: plus-lighter;}
                     &.colour{left: 50%;bottom: 0; mix-blend-mode:multiply ;}
                 } 
                 svg{
                     animation:dashLine 5s forwards; stroke-dashoffset: 2525; stroke-dasharray: 2525;
                 }
             }
+            
         }
         .type{display: flex; justify-content: space-between; flex-wrap:wrap; max-width:200px;
             li{@include f_ab(18px);
                 &:nth-child(2n){text-align: right; margin-left: 10px;}
             }
         }
-        
+        .scroll{
+            position: absolute; bottom: 20px; left: 50%; transform:translateX(-50%);text-align: center;
+            p{@include f_lex(12px); letter-spacing: -.04em; margin-bottom: 10px;}
+            &_arrow{
+                display: inline-block; width: 8px; height: 15px; position: relative; animation: pop_down 1s infinite; transition:.3s;
+                &:before{content:''; display: block; width: 1px; height: 100%; background: #333; position: absolute; left: 50%; transform:translateX(-50%)}
+                &:after{content:''; display: block; width: 5px; height: 5px; border:1px solid #333; border-width:1px 1px 0 0; position: absolute; bottom: 0; left: 50%; transform:translateX(-50%) rotate(135deg); transform-origin: center center;}
+            }
+        }
     }
     .right_fixed{position: fixed; right: 0; top: 50%;transform:translate(30%,-50%) rotate(90deg); @include f_oli(24px); letter-spacing: .17em;}
+    .profile{padding: 180px 0;
+        >div{display: flex; justify-content: center;}
+        &_tt{@include f_oli(30px); margin-right: 50px; width: 140px; text-align: right;}
+        &_txt{width: 52%;}
+        &_con{display: flex; align-items: flex-start; 
+            + div{margin-top: 60px;}
+            .career_li{ font-size:16px; line-height: 1.6; padding-top: 8px;
+                li{ position: relative;
+                    + li{margin-top: 10px;}
+                    .marker{position: absolute; left: 0; top: 7px; width: 10px; height: 10px; 
+                        &:before{content:''; display: block; width: 130%; height: 1px; background: #333; position: absolute; left: 50%;top: 50%; transform:translate(-50%,-50%) rotate(45deg)}
+                        &:after{content:''; display: block; width: 130%; height: 1px; background: #333; position: absolute; left: 50%;top: 50%; transform:translate(-50%,-50%) rotate(-45deg)}
+                    }
+                    p{padding-left: 34px;letter-spacing: 0.14em;
+                        span{color:#999; font-size:14px}
+                    }
+                }
+            }
+            .skill_li{ margin-top: -12px;
+                li{padding: 5px 12px 3px; border:1px solid #333; border-radius:14px; text-align: center; display: inline-block; margin-right: 12px; margin-top: 12px; position: relative; overflow: hidden; transition:.3s color; cursor: default; font-size:14px;
+                    &:hover{background: #fff; background-clip: text; color:transparent}
+                    .color{position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: $pointColor; z-index: -1; transition:.3s width;}
+                }
+            }
+        }
+        &_img{width: 420px; height: 530px; background: #e1e1e1; margin-right: 120px; border-radius:210px;}
+    }
+    .work{ padding: 120px 0;
+        &List{}
+        &Cate{display: flex; margin-top: -20px; border-bottom:1px solid #333; padding-bottom: 5px;
+            li{@include f_oli(20px); color:#aaa;
+                &.on{color:#333; font-weight:600}
+                +li{margin-left: 12px; padding-left: 12px; position: relative;
+                    &:before{content:''; display: block; width: 1px; height: 18px; background: #aaa; position: absolute; left: 0; top: 50%; transform:translateY(-50%)}
+                }
+            }
+        }
+        &Con{
+            li{
+                a{padding: 40px 25px; display: flex; position: relative;
+                    &:hover{
+                        .content{
+                            .title{color:$pointColor}
+                            p{color:$pointColor}
+                        }
+                        .workConImg:after{opacity:0}
+                        .workConLink{color:$pointColor}
+                        .workConLink span{
+                            &:after{background: $pointColor; transform:translateY(-50%) rotate(90deg); opacity:1}
+                            &:before{background: $pointColor;}
+                        }
+                    }
+                }
+                + li{border-top:1px solid #333}
+                
+            }
+            &Txt{display: flex;flex-direction: column; justify-content: space-between; width: 36.364%;
+                .cate{font-size:16px; color:#666;}
+                .title{font-size: 32px; font-weight:600; margin-bottom: 18px; overflow: visible; white-space: nowrap; position: relative; z-index: 1; transition:.3s color}
+                p{color:#666; font-size: 16px}
+                .data{color:#aaa;}
+            }
+            &Img{width: 600px; height: 300px; position: relative; overflow: hidden;
+                &:after{content:''; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: linear-gradient( rgba(0,0,0,.4) 10%, transparent 100%); z-index: 1; opacity:1; transition:.3s opacity;}
+                img{width: 100%; position: absolute; top: 0px; transition: 1.5s;}
+            }
+            &Link{position: absolute; right: 30px; bottom: 60px; padding-left: 28px;
+                span{width: 18px; height: 18px; display: block; margin-right: 10px; position: absolute; left: 0;
+                    &:before{content:''; display: block; width: 100%; height: 1px; background: #333; position: absolute; top: 50%; transform:translateY(-50%);}
+                    &:after{content:''; display: block; width: 100%; height: 1px; background: #333; position: absolute; top: 50%; transform:translateY(-50%); opacity:0; transition:.3s}
+                }
+            }
+        }
+    }
 }
 
+footer{
+    
+
+}
 @keyframes dashLine {
     0%{stroke-dashoffset: 2525; }
     50%{stroke-dashoffset: -2525;}
     100%{stroke-dashoffset: -5050;}
 }
+@keyframes pop_down {
+    0%{bottom: 0;}
+    50%{bottom: -5px;}
+    100%{bottom: 0;}
+}
 
 @keyframes rotate {
     0%{transform:rotate(0deg)}
     100%{transform:rotate(360deg)}
+    
+}
+@keyframes rotate_r {
+    0%{transform:rotate(360deg)}
+    100%{transform:rotate(0deg)}
     
 }
