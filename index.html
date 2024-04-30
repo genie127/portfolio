@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Genie_Portfolio</title>
@@ -60,13 +61,13 @@
         </section>
         <section class="profile">
             <div class="containerFix">
-                <div class="profile_img">
+                <div class="profile_img"data-aos="fade-up">
                     <div class="bg">
 
                     </div>
                 </div>
                 <div class="profile_txt">
-                    <div class="profile_con career">
+                    <div class="profile_con career" data-aos="fade-up">
                         <h4 class="profile_tt">Career</h4>
                         <ul class="career_li">
                             <li>
@@ -76,7 +77,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="profile_con edu">
+                    <div class="profile_con edu" data-aos="fade-up">
                         <h4 class="profile_tt">Education</h4>
                         <ul class="career_li">
                             <li>
@@ -106,7 +107,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="profile_con skill">
+                    <div class="profile_con skill" data-aos="fade-up">
                         <h4 class="profile_tt">Skills</h4>
                         <ul class="skill_li">
                             <li data-percent="100%"><span class="color"></span>HTML5</li>
@@ -115,7 +116,8 @@
                             <li data-percent="80%"><span class="color"></span>Javascript</li>
                             <li data-percent="90%"><span class="color"></span>JQuery</li>
                             <li data-percent="0%"><span class="color"></span>React</li>
-                            <li data-percent="0%"><span class="color"></span>Node.js</li>
+                            <li data-percent="30%"><span class="color"></span>Node.js</li>
+                            <li data-percent="40%"><span class="color"></span>mySQL</li>
                             <li data-percent="50%"><span class="color"></span>GNUBoard</li>
                             <li data-percent="0%"><span class="color"></span>Python</li>
                             <li data-percent="40%"><span class="color"></span>GITHUB</li>
@@ -138,7 +140,7 @@
                         <li>Back-end</li>
                     </ul>
                     <ul class="workCon">
-                        <li>
+                        <li  data-aos="fade-up">
                             <a href="https://www.soyoupartners.com/" target="_blank">
                                 <div class="workConTxt">
                                     <p class="cate">프로젝트</p>
@@ -156,7 +158,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li data-aos="fade-up">
                             <a href="https://www.hpmpc.org/" target="_blank">
                                 <div class="workConTxt">
                                     <p class="cate">프로젝트</p>
@@ -174,7 +176,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li data-aos="fade-up">
                             <a href="https://www.hpmpc.org/" target="_blank">
                                 <div class="workConTxt">
                                     <p class="cate">프로젝트</p>
@@ -192,7 +194,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li data-aos="fade-up">
                             <a href="https://motor.hyosung.com/" target="_blank">
                                 <div class="workConTxt">
                                     <p class="cate">프로젝트</p>
@@ -211,12 +213,16 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="btn_more">
+                        <span class="icon_more"></span>View More
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

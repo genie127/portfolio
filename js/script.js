@@ -1,3 +1,5 @@
+AOS.init();
+
 const skill_li = document.querySelectorAll('.skill_li li'),
     pointColor = '#1B6DC5';
 ;
