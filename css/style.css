@@ -288,6 +288,7 @@ main .profile_con .career_li li p span {
 }
 main .profile_con .skill_li {
   margin-top: -12px;
+  width: calc(100% - 190px);
 }
 main .profile_con .skill_li li {
   padding: 5px 12px 3px;
