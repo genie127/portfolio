@@ -236,7 +236,7 @@ main .profile_con {
   align-items: flex-start;
 }
 main .profile_con + div {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 main .profile_con .career_li {
   font-size: 16px;
