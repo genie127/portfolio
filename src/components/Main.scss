@@ -1,6 +1,9 @@
 @import './Template.scss';
 
-.Main{position: relative; height: 100vh;
+.section{position: relative; min-height: 100vh; padding:120px 0; display: flex; align-items: center; flex-direction: column; justify-content: space-between;
+    .secTt{font-size: 140px; color:$pointColor; text-shadow:4px 4px 0 $shadeColor; font-family:'Arimo'; font-weight:700; font-style: italic;}
+}
+.Main{
     > .container{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;}
     .scroll{text-align: center;
         p{ font-family: 'Departure-Mono';  font-size:12px; color:$pointColor}
@@ -10,27 +13,28 @@
         }
     }
 }
-.popupBox{border:2px solid $pointColor; border-radius:15px;position: relative; width: 1200px; max-width: 100%; box-shadow: -30px -30px 0 $shadeColor; margin-top: 50px;
+.square{display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+    &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute;}
+    &.top{
+        &:before,&:after{top: 0; transform:translate(-50%,-50%)}
+        &:before{left: 0;}
+        &:after{left: 100%;}
+    }
+    &.mid{
+        &:before,&:after{top: 50%; transform:translate(-50%,-50%)}
+        &:before{left: 0;}
+        &:after{left: 100%;}
+    }
+    &.bot{
+        &:before,&:after{bottom: 0; transform:translate(-50%,50%)}
+        &:before{left: 0;}
+        &:after{left: 100%;}
+    }
+}
+.popupBox{border:2px solid $pointColor; border-radius:15px;position: relative; width: 1200px; max-width: 100%; box-shadow: -30px -30px 0 $shadeColor; margin-top: 50px; background: #fff;
     .part{padding: 45px 65px; position: absolute; background: #fff; border:2px solid $pointColor; font-family: 'Departure-Mono', sans-serif; font-size:40px; color:$pointColor; text-transform: uppercase; top: -90px;left: -90px;
-        .square{display: block; width: 100%; height: 100%;
-            &:before,&:after{content:''; display: block; width: 15px;height: 15px; background: #fff; border:2px solid $pointColor; position: absolute;}
-            &.top{
-                &:before,&:after{top: 0; transform:translate(-50%,-50%)}
-                &:before{left: 0;}
-                &:after{left: 100%;}
-            }
-            &.mid{
-                &:before,&:after{top: 50%; transform:translate(-50%,-50%)}
-                &:before{left: 0;}
-                &:after{left: 100%;}
-            }
-            &.bot{
-                &:before,&:after{bottom: 0; transform:translate(-50%,50%)}
-                &:before{left: 0;}
-                &:after{left: 100%;}
-            }
-        }
-        &:before,&:after{content:''; display: block; width: 15px;height: 15px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%)}
+        
+        &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%)}
         &:before{top:0}
         &:after{top:100%}
     }
@@ -58,3 +62,60 @@
         }
     }
 }
+
+.About{
+    .pro{
+        &file{display: flex; flex-wrap: wrap; align-items: flex-start; 
+            .secTt{position: absolute; left: -20%; bottom: 85%; z-index: 2;}
+        }
+        &_pic{position: relative; width: 29.569%; margin-right: 10%; 
+            p{font-size:60px; font-family: "Volkhov", serif; font-style: italic; color:$pointColor; position: absolute; z-index: 1; left: 100%; top: 100%; transform:translate(-50%,-50%);
+                &:before{content:'me'; -webkit-text-stroke: 14px #fff; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); z-index: -1;}
+            }
+            &_photo{ border:2px solid $pointColor; background: url('../../public/img/genie.png') no-repeat center center/cover; height: 505px; width: 100%;
+                &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%)}
+                &:before{top:0}
+                &:after{top:100%}
+                img{width: 100%; height: 100%; object-fit: cover;}
+               
+            }
+        }
+        &_car{
+            &_tt{font-family:'Arimo'; font-weight:700; font-style:italic; font-size: 24px; letter-spacing: 0.17em; width: 175px;}
+            &_con{
+                display: flex;                
+                ul{
+                    li{
+                        p{@include f_Pre(16px,Regular,400,#333); letter-spacing: 0.17em;
+                            &.date{@include f_Pre(16px,Semibold,600,#333);
+                            &+p{margin-top: 5px;}
+                            }
+                        }
+                        span{color:#999; font-size:14px}
+                        &+li{margin-top: 15px;}
+                    }
+                }
+                &:first-child{
+                    ul{
+                        li{
+                            &+li{margin-top: 9px;}
+                        }
+                    }
+                }
+                &+.pro_car_con{margin-top: 40px;}
+            }
+        }
+        &_skill{width: 100%; margin-top:60px; display: flex;
+            .skill{display: flex; flex-wrap: wrap;
+                li{padding: 8px 15px; border:1px solid $shadeColor; margin: 0 7.5px 7.5px; position: relative; transition:.3s;font-family:'Arimo', sans-serif; font-size:18px; color:#333; font-style: italic; letter-spacing: 0.17em; transition:.3s;
+                    &:hover{
+                        border-color:$pointColor;
+                            color:$secColor;
+                    
+                    }
+                    &:after{content:''; display: block;width: 8px; height: 8px; border:1px solid $pointColor; position: absolute;top: 0; left: 100%; transform:translate(-50%,-50%)}
+                }
+            }
+        }
+    }
+}   

@@ -2,7 +2,7 @@ import './Main.scss'
 
 const Main =()=>{
     return(
-        <div className="Main">
+        <div className="Main section">
             <div className="container">
                 <div className="popupBox">
                     <h3 className="part"><span className="square top"></span><span className="square bot"></span><span className="square mid"></span>Web Front-end</h3>
