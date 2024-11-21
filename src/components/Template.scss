@@ -1,0 +1,42 @@
+@import './reset.scss' ;
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Geologica:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Geologica:wght@100..900&family=Rasa:ital,wght@0,300..700;1,300..700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Departure-Mono';
+    src: url('../../public/fonts/DepartureMono-Regular.woff2');
+}
+
+@mixin f_Pre($z, $w, $w_num, $c ){
+    font-family: 'Pretendard-'+$w, sans-serif;
+    font-size:$z;
+    font-weight:$w_num;
+    color:$c;
+};
+@mixin hide{opacity:0; visibility: hidden; transition:.3s}
+@mixin show{opacity: 1; visibility: visible;}
+
+@mixin center{position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%)}
+
+$pointColor : #467A00;
+$shadeColor:#C9E295;
+$secColor:#82A553;
+
+*{box-sizing: border-box; color:#333;}
+body{background:url(../../public/img/background.png) repeat center center/cover; @include f_Pre(16px, Regular, 400, #333)}
+.container{width: 1470px; padding: 0 15px; margin: 0 auto; max-width:100%}

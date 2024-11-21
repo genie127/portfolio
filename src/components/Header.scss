@@ -1,0 +1,13 @@
+@import './Template.scss';
+
+.Header{padding: 26px 0; @include hide; position: fixed;top: 0; left: 0; right: 0;
+    > div{display: flex; justify-content: space-between; align-items: center;}
+    nav{margin-right: -10px;
+        ul{display: flex;
+            li{
+                + li{margin-left: 10px}
+                a{font-family: "Arimo", sans-serif; font-style: italic; font-size:20px; color:$pointColor; padding: 5px 10px;}
+            }
+        }
+    }
+}

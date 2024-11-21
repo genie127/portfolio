@@ -1,0 +1,60 @@
+@import './Template.scss';
+
+.Main{position: relative; height: 100vh;
+    > .container{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;}
+    .scroll{text-align: center;
+        p{ font-family: 'Departure-Mono';  font-size:12px; color:$pointColor}
+        .scrollArr{display:inline-block; width: 9px; height: 18px; position: relative; margin-top: 7px;
+            &:before{content:''; display: block; position: absolute; top: 0;bottom: 0; left: 50%; width: 1px; background: $pointColor; transform:translateX(-50%)} 
+            &:after{content:''; display: block; position: absolute; width: 9px; height: 9px; border:1px solid $pointColor; border-width:1px 1px 0 0; bottom: 0; left: 50%; transform:translateX(-50%) rotate(135deg);} 
+        }
+    }
+}
+.popupBox{border:2px solid $pointColor; border-radius:15px;position: relative; width: 1200px; max-width: 100%; box-shadow: -30px -30px 0 $shadeColor; margin-top: 50px;
+    .part{padding: 45px 65px; position: absolute; background: #fff; border:2px solid $pointColor; font-family: 'Departure-Mono', sans-serif; font-size:40px; color:$pointColor; text-transform: uppercase; top: -90px;left: -90px;
+        .square{display: block; width: 100%; height: 100%;
+            &:before,&:after{content:''; display: block; width: 15px;height: 15px; background: #fff; border:2px solid $pointColor; position: absolute;}
+            &.top{
+                &:before,&:after{top: 0; transform:translate(-50%,-50%)}
+                &:before{left: 0;}
+                &:after{left: 100%;}
+            }
+            &.mid{
+                &:before,&:after{top: 50%; transform:translate(-50%,-50%)}
+                &:before{left: 0;}
+                &:after{left: 100%;}
+            }
+            &.bot{
+                &:before,&:after{bottom: 0; transform:translate(-50%,50%)}
+                &:before{left: 0;}
+                &:after{left: 100%;}
+            }
+        }
+        &:before,&:after{content:''; display: block; width: 15px;height: 15px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%)}
+        &:before{top:0}
+        &:after{top:100%}
+    }
+    .btnArea{height: 70px; background: $pointColor; border-radius:10px 10px 0 0; display: flex; justify-content: flex-end; align-items: center; padding: 0 25px;
+        .btnPopup{display: block; width: 20px;height: 20px; border-radius: 50%; margin-left: 15px;
+            &.green{background: #2BB91B;}
+            &.yellow{background: #F3DC29;}
+            &.red{background: #D30F1A;}
+        }
+    }   
+    .conArea{padding: 100px 15px 25px;
+        .mainTt{font-family: "Geologica", sans-serif; font-weight:700; text-transform: uppercase; font-size:150px; color:$pointColor; letter-spacing: -0.03em; text-align: center;}
+        .name{text-align: right; margin-top: -30px; padding-right: 15px;
+            span{font-family: "Volkhov", serif; font-size: 60px; font-weight:200; color:$pointColor; text-transform: uppercase; font-style: italic; position: relative; z-index: 1;
+                &:after{content: ""; position: absolute; top: 9px; left: 50%;  width: calc(100% - 9px); height: 30%; z-index: -1; transform: translateX(-52%) skewX(-20deg); background: #fff; border-radius: 13px 8px;}
+            }
+        }
+        .prop{background: $secColor; border-radius:35px; padding: 20px 30px; width: 830px; margin: 60px auto 0;
+            &Wrap{white-space: nowrap;}
+            p{display: inline-block; color:#fff; font-size: 18px; font-family: 'Arimo'; font-style: italic; padding: 0 25px; position: relative;  
+                &+p{
+                    &:before{content:''; display: block; width: 3px;height: 3px; border-radius:50%; background: #fff; position: absolute; top: 50%; left: 0; transform:translateY(-50%);}
+                }
+            }
+        }
+    }
+}
