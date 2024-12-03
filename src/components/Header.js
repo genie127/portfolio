@@ -1,26 +1,28 @@
+import {Link} from 'react-router-dom'
+
 import './Header.scss'
 const Header =()=>{
     return(
         <div className="Header">
             <div className="container">
                 <h1 class="logo">
-                    <a>
+                    <Link to="/">
                         <img src="/img/logo.svg" alt="Portfolio Shinjinhee"/>
-                    </a>
+                    </Link>
                 </h1>
                 <nav>
                     <ul className="gnb">
                         <li>
-                            <a href="">Home</a>
+                           Home
                         </li>
                         <li>
-                            <a href="">About</a>
+                           About
                         </li>
                         <li>
-                            <a href="">Works</a>
+                           Works
                         </li>
                         <li>
-                            <a href="">Contact</a>
+                           Contact
                         </li>
                     </ul>
                 </nav>
