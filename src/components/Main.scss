@@ -2,13 +2,13 @@
 
 
 .section{position: relative; min-height: 100vh; padding:120px 0; display: flex; align-items: center; flex-direction: column; justify-content: space-between;
-    @include responsive(991px){padding: 18vw 0}
+    @include responsive(991px){padding: 20vw 0}
     .secTt{font-size: 140px; color:$pointColor; text-shadow:4px 4px 0 $shadeColor; font-family:'Arimo'; font-weight:700; font-style: italic;
         @include responsive(991px){font-size:18.5vw; text-shadow:.8vw .8vw 0 $shadeColor}
     }
 }
 .Main{
-    @include responsive(991px){padding-top: 35vw;}
+    @include responsive(991px){padding-top: 40vw;}
     > div{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;}
     .scroll{text-align: center;
         @include responsive(991px){
@@ -179,7 +179,7 @@
             @include responsive(1620px){width: 50%; margin: 0 auto}
             @include responsive(991px){width: 100%; margin: 0 auto}
             p{font-size:60px; font-family: "Volkhov", serif; font-style: italic; color:$pointColor; position: absolute; z-index: 1; left: 100%; top: 100%; transform:translate(-50%,-50%);
-                @include responsive(991px){right: 0; left: initial; transform:translate(0,-50%); font-size:10vw}
+                @include responsive(991px){right: -15px; left: initial; transform:translate(0,-50%); font-size:10vw}
                 &:before{content:'me'; -webkit-text-stroke: 14px #fff; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); z-index: -1;
                     @include responsive(991px){-webkit-text-stroke: 10px #fff;}
                 }
