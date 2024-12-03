@@ -1,11 +1,13 @@
+import { Wrap } from '../style/StyledComponents';
 import './Main.scss'
+
 
 const Main =()=>{
     return(
         <div className="Main section">
-            <div className="container">
+            <Wrap>
+                <h3 className="part"><span className="square top"></span><span className="square bot"></span><span className="square mid"></span>Front-end Developer</h3>
                 <div className="popupBox">
-                    <h3 className="part"><span className="square top"></span><span className="square bot"></span><span className="square mid"></span>Web Front-end</h3>
                     <div className="btnArea">
                         <span className="btnPopup green"></span>
                         <span className="btnPopup yellow"></span>
@@ -23,10 +25,18 @@ const Main =()=>{
                                 <p>Standards</p>
                                 <p>Crossbrowsing</p>
                             </div>
+                            <div className="propWrap clone">
+                                <p>Efficient</p>
+                                <p>Accessibility</p>
+                                <p>Responsive</p>
+                                <p>Semantic</p>
+                                <p>Standards</p>
+                                <p>Crossbrowsing</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Wrap>
             <div className="scroll">
                 <p>Scroll down</p>
                 <span className="scrollArr"></span>

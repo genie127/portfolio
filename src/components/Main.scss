@@ -1,20 +1,47 @@
 @import './Template.scss';
 
+
 .section{position: relative; min-height: 100vh; padding:120px 0; display: flex; align-items: center; flex-direction: column; justify-content: space-between;
-    .secTt{font-size: 140px; color:$pointColor; text-shadow:4px 4px 0 $shadeColor; font-family:'Arimo'; font-weight:700; font-style: italic;}
+    @include responsive(991px){padding: 18vw 0}
+    .secTt{font-size: 140px; color:$pointColor; text-shadow:4px 4px 0 $shadeColor; font-family:'Arimo'; font-weight:700; font-style: italic;
+        @include responsive(991px){font-size:18.5vw; text-shadow:.8vw .8vw 0 $shadeColor}
+    }
 }
 .Main{
-    > .container{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;}
+    @include responsive(991px){padding-top: 35vw;}
+    > div{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;}
     .scroll{text-align: center;
-        p{ font-family: 'Departure-Mono';  font-size:12px; color:$pointColor}
-        .scrollArr{display:inline-block; width: 9px; height: 18px; position: relative; margin-top: 7px;
+        @include responsive(991px){
+            margin-top: 20vw;
+        }
+        p{ font-family: 'Departure-Mono';  font-size:12px; color:$pointColor;
+            @include responsive(991px){font-size:2.5vw}
+        }
+        .scrollArr{display:inline-block; width: 9px; height: 18px; position: relative; margin-top: 7px;animation: btn-motion1 1.5s ease-in-out infinite;
+            @include responsive(991px){width: 1.4vw; height: 4vw;}
             &:before{content:''; display: block; position: absolute; top: 0;bottom: 0; left: 50%; width: 1px; background: $pointColor; transform:translateX(-50%)} 
-            &:after{content:''; display: block; position: absolute; width: 9px; height: 9px; border:1px solid $pointColor; border-width:1px 1px 0 0; bottom: 0; left: 50%; transform:translateX(-50%) rotate(135deg);} 
+            &:after{content:''; display: block; position: absolute; width: 9px; height: 9px; border:1px solid $pointColor; border-width:1px 1px 0 0; bottom: 0; left: 50%; transform:translateX(-50%) rotate(135deg);
+                @include responsive(991px){
+                    width: 1.4vw; height: 1.4vw;
+                }
+            } 
         }
     }
 }
+@keyframes btn-motion1 {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+}
 .square{display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0;
-    &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute;}
+    &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute;
+        @include responsive(991px){width: 2vw; height: 2vw; border-width:1px}
+    }
     &.top{
         &:before,&:after{top: 0; transform:translate(-50%,-50%)}
         &:before{left: 0;}
@@ -31,68 +58,171 @@
         &:after{left: 100%;}
     }
 }
-.popupBox{border:2px solid $pointColor; border-radius:15px;position: relative; width: 1200px; max-width: 100%; box-shadow: -30px -30px 0 $shadeColor; margin-top: 50px; background: #fff;
-    .part{padding: 45px 65px; position: absolute; background: #fff; border:2px solid $pointColor; font-family: 'Departure-Mono', sans-serif; font-size:40px; color:$pointColor; text-transform: uppercase; top: -90px;left: -90px;
-        
-        &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%)}
-        &:before{top:0}
-        &:after{top:100%}
+.part{padding: 40px 60px; position: absolute; background: #fff; border:2px solid $pointColor; font-family: 'Departure-Mono', sans-serif; font-size:40px; color:$pointColor; text-transform: uppercase; top: -40px;left: -40px; opacity:0; transform:scale(0); animation:partOpen .5s forwards ease-in-out; z-index: 2; 
+    @include responsive(1590px){
+        left: 21px;top: 0%; 
+    }
+    @include responsive(991px){
+        font-size:3vw; padding: 4vw 6vw; border-width:1px;
+    }
+    &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%);
+        @include responsive(991px){width: 2vw; height: 2vw;border-width:1px;} 
+    }
+    &:before{top:0}
+    &:after{top:100%}
+}
+
+.popupBox{border:2px solid $pointColor; border-radius:15px;position: relative; width: 1200px; max-width: 100%; box-shadow: -30px -30px 0 $shadeColor; margin-top: 50px; background: #fff; opacity:0; transform:scale(0); animation:partOpen 1s .5s forwards ease-in-out; transform-origin:left top; 
+    @include responsive(1590px){
+        margin-top: 6vw;max-width:calc(100% - 50px); box-shadow:-20px -20px 0 $shadeColor;
+    }
+    @include responsive(991px){
+        box-shadow:-2.5vw -2.5vw 0 $shadeColor; border-width:1px;
     }
     .btnArea{height: 70px; background: $pointColor; border-radius:10px 10px 0 0; display: flex; justify-content: flex-end; align-items: center; padding: 0 25px;
+        @include responsive(991px){
+            height: 8vw; padding: 2vw;
+        }
         .btnPopup{display: block; width: 20px;height: 20px; border-radius: 50%; margin-left: 15px;
+            @include responsive(991px){
+                width: 2.2vw;height: 2.2vw; margin-left: 1.8vw;
+            }
             &.green{background: #2BB91B;}
             &.yellow{background: #F3DC29;}
             &.red{background: #D30F1A;}
         }
     }   
     .conArea{padding: 100px 15px 25px;
-        .mainTt{font-family: "Geologica", sans-serif; font-weight:700; text-transform: uppercase; font-size:150px; color:$pointColor; letter-spacing: -0.03em; text-align: center;}
-        .name{text-align: right; margin-top: -30px; padding-right: 15px;
-            span{font-family: "Volkhov", serif; font-size: 60px; font-weight:200; color:$pointColor; text-transform: uppercase; font-style: italic; position: relative; z-index: 1;
-                &:after{content: ""; position: absolute; top: 9px; left: 50%;  width: calc(100% - 9px); height: 30%; z-index: -1; transform: translateX(-52%) skewX(-20deg); background: #fff; border-radius: 13px 8px;}
+        @include responsive(991px){
+            padding: 14vw 2vw 3.5vw;
+        }
+        .mainTt{font-family: "Geologica", sans-serif; font-weight:700; text-transform: uppercase; font-size:150px; color:$pointColor; letter-spacing: -0.03em; text-align: center;
+            @include responsive(991px){
+                font-size: 12.8vw;
             }
         }
-        .prop{background: $secColor; border-radius:35px; padding: 20px 30px; width: 830px; margin: 60px auto 0;
-            &Wrap{white-space: nowrap;}
-            p{display: inline-block; color:#fff; font-size: 18px; font-family: 'Arimo'; font-style: italic; padding: 0 25px; position: relative;  
-                &+p{
-                    &:before{content:''; display: block; width: 3px;height: 3px; border-radius:50%; background: #fff; position: absolute; top: 50%; left: 0; transform:translateY(-50%);}
+        .name{text-align: right; margin-top: -30px; padding-right: 15px;
+
+            @include responsive(991px){
+                 padding-right:1vw; margin-top: -2.5vw;
+            }
+            span{font-family: "Volkhov", serif; font-size: 60px; font-weight:200; color:$pointColor; text-transform: uppercase; font-style: italic; position: relative; z-index: 1;
+                @include responsive(991px){
+                    font-size: 6vw;
                 }
+                &:after{content: ""; position: absolute; top: 9px; left: 50%;  width: calc(100% - 9px); height: 30%; z-index: -1; transform: translateX(-52%) skewX(-20deg); background: #fff; border-radius: 13px 8px;
+                    @include responsive(991px){top: 1vw; width: calc(100% - 3px); border-radius:2vw .3vw; transform:translateX(-53.5%) }
+                }
+            }
+        }
+        .prop{background: $secColor; border-radius:35px; padding: 20px 30px; width: 830px; margin: 60px auto 0;display: flex;overflow: hidden; max-width:100%;
+            @include responsive(991px){
+                padding: 1vw; margin-top: 9vw;
+            }
+            &Wrap{white-space: nowrap; animation: 30s 1s linear infinite normal none running infiniteAnimation1; 
+                &.clone {
+                animation: 30s 1s linear infinite infiniteAnimation2;
+                }
+            }
+            p{display: inline-block; color:#fff; font-size: 18px; font-family: 'Arimo'; font-style: italic; padding: 0 25px; position: relative;  
+                @include responsive(991px){
+                    font-size:2.7vw; padding: 0 3vw;
+                }
+                &:before{content:''; display: block; width: 3px;height: 3px; border-radius:50%; background: #fff; position: absolute; top: 50%; left: 0; transform:translateY(-50%);}
             }
         }
     }
 }
-
+@keyframes partOpen {
+    0% {
+      transform: scale(0);
+      opacity:0
+    }
+    
+    100% {
+      transform:scale(1);
+      opacity:1
+    }
+  }
+@keyframes infiniteAnimation1 {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    50.1% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes infiniteAnimation2 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
 .About{
     .pro{
         &file{display: flex; flex-wrap: wrap; align-items: flex-start; 
-            .secTt{position: absolute; left: -20%; bottom: 85%; z-index: 2;}
+            @include responsive(1280px){flex-direction: column;}
+            .secTt{position: absolute; left: -20%; bottom: 85%; z-index: 2;
+                @include responsive(1620px){left: -15px;}
+                @include responsive(991px){bottom: 93%;}
+            }
         }
         &_pic{position: relative; width: 29.569%; margin-right: 10%; 
+            @include responsive(1620px){width: 50%; margin: 0 auto}
+            @include responsive(991px){width: 100%; margin: 0 auto}
             p{font-size:60px; font-family: "Volkhov", serif; font-style: italic; color:$pointColor; position: absolute; z-index: 1; left: 100%; top: 100%; transform:translate(-50%,-50%);
-                &:before{content:'me'; -webkit-text-stroke: 14px #fff; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); z-index: -1;}
+                @include responsive(991px){right: 0; left: initial; transform:translate(0,-50%); font-size:10vw}
+                &:before{content:'me'; -webkit-text-stroke: 14px #fff; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); z-index: -1;
+                    @include responsive(991px){-webkit-text-stroke: 10px #fff;}
+                }
             }
             &_photo{ border:2px solid $pointColor; background: url('../../public/img/genie.png') no-repeat center center/cover; height: 505px; width: 100%;
+                @include responsive(1620px){height: 50vw;}
+                @include responsive(991px){height: 100vw; border-width:1px}
                 &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%)}
                 &:before{top:0}
                 &:after{top:100%}
-                img{width: 100%; height: 100%; object-fit: cover;}
                
             }
         }
         &_car{
-            &_tt{font-family:'Arimo'; font-weight:700; font-style:italic; font-size: 24px; letter-spacing: 0.17em; width: 175px;}
+            @include responsive(1280px){padding-top: 12vw;}
+            &_tt{font-family:'Arimo'; font-weight:700; font-style:italic; font-size: 24px; letter-spacing: 0.17em; width: 175px;
+                @include responsive(991px){font-size:5vw; margin-bottom: 5vw;}
+            }
             &_con{
-                display: flex;                
+                display: flex; 
+                @include responsive(991px){flex-direction: column}
                 ul{
                     li{
                         p{@include f_Pre(16px,Regular,400,#333); letter-spacing: 0.17em;
+                            @include responsive(991px){
+                                @include f_Pre(3.5vw,Regular,400,#333)
+                            }
                             &.date{@include f_Pre(16px,Semibold,600,#333);
-                            &+p{margin-top: 5px;}
+                                @include responsive(991px){
+                                    @include f_Pre(3.5vw,Semibold,600,#333);
+                                }
+                                &+p{margin-top: 5px;
+                                    @include responsive(991px){margin-top: 1.5vw;}
+                                }
                             }
                         }
-                        span{color:#999; font-size:14px}
-                        &+li{margin-top: 15px;}
+                        span{color:#999; font-size:14px;
+                            @include responsive(991px){display: inline-block; font-size:3.3vw; line-height: 2;}
+                        }
+                        &+li{margin-top: 15px;
+                            @include responsive(991px){margin-top: 7vw;}
+                        }
+                        
                     }
                 }
                 &:first-child{
@@ -102,18 +232,25 @@
                         }
                     }
                 }
-                &+.pro_car_con{margin-top: 40px;}
+                &+.pro_car_con{margin-top: 40px;
+                    @include responsive(991px){margin-top: 10vw;}
+                }
             }
         }
         &_skill{width: 100%; margin-top:60px; display: flex;
+            @include responsive(991px){flex-direction: column;}
             .skill{display: flex; flex-wrap: wrap;
+                @include responsive(991px){margin-left: -7.5px;}
                 li{padding: 8px 15px; border:1px solid $shadeColor; margin: 0 7.5px 7.5px; position: relative; transition:.3s;font-family:'Arimo', sans-serif; font-size:18px; color:#333; font-style: italic; letter-spacing: 0.17em; transition:.3s;
+                    @include responsive(991px){font-size:3.5vw}
                     &:hover{
                         border-color:$pointColor;
                             color:$secColor;
                     
                     }
-                    &:after{content:''; display: block;width: 8px; height: 8px; border:1px solid $pointColor; position: absolute;top: 0; left: 100%; transform:translate(-50%,-50%)}
+                    &:after{content:''; display: block;width: 8px; height: 8px; border:1px solid $pointColor; position: absolute;top: 0; left: 100%; transform:translate(-50%,-50%);
+                        @include responsive(991px){width: 1.5vw; height: 1.5vw;}
+                    }
                 }
             }
         }

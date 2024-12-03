@@ -32,6 +32,11 @@
 @mixin show{opacity: 1; visibility: visible;}
 
 @mixin center{position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%)}
+@mixin responsive($width){
+    @media(max-width:$width){
+        @content;
+    }
+}
 
 $pointColor : #467A00;
 $shadeColor:#C9E295;
@@ -39,4 +44,6 @@ $secColor:#82A553;
 
 *{box-sizing: border-box; color:#333;}
 body{background:url(../../public/img/background.png) repeat center center/cover; @include f_Pre(16px, Regular, 400, #333)}
-.container{width: 1470px; padding: 0 15px; margin: 0 auto; max-width:100%}
+.m_br{display: none;
+    @include responsive(991px){display: block;}
+}

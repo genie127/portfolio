@@ -1,3 +1,5 @@
+import { Wrap } from "../style/StyledComponents";
+
 const About =()=>{
 
     
@@ -18,7 +20,7 @@ const About =()=>{
 
     return(
         <div className="About section">
-            <div className="container">
+            <Wrap>
                 <div className="profile">
                     <div className="pro_pic">
                         <h2 className="secTt">About</h2>
@@ -54,7 +56,7 @@ const About =()=>{
                             <ul>
                                 <li>
                                     <p className="date">2024.09 ~ 2024.11</p>
-                                    <p>프론트엔드 개발(React, JS)<span>이젠아카데미 인천</span></p>
+                                    <p>프론트엔드 개발(React, JS) <span>이젠아카데미 인천</span></p>
                                 </li>
                                 <li>
                                     <p className="date">2024.03 ~ 2024.08</p>
@@ -74,7 +76,7 @@ const About =()=>{
                                 </li>
                                 <li>
                                     <p className="date">2015.03 ~ 2019.02</p>
-                                    <p>경기대학교 사회복지학 <span>전공</span> 커뮤니티 안전회복학 <span>융합전공</span></p>
+                                    <p>경기대학교 사회복지학 <span>전공</span> <br className="m_br"></br> 커뮤니티 안전회복학 <span>융합전공</span></p>
                                 </li>
                                 
                             </ul>
@@ -108,7 +110,7 @@ const About =()=>{
                         </ul>
                     </div>
                 </div>
-            </div>
+            </Wrap>
 
         </div>
     )
