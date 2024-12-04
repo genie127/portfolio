@@ -1,5 +1,5 @@
 import { Wrap } from '../style/StyledComponents';
-import './Main.scss'
+import './scss/Main.scss'
 
 
 const Main =()=>{

@@ -1,0 +1,47 @@
+@import './Template.scss';
+
+.modal{
+    &Bg{background: rgba(0,0,0,.4); position: fixed; top: 0;bottom: 0;right: 0;left: 0; z-index: 5; }
+    &Box{position: fixed; top: 50%; left: 50%; transform:translate(-50%,-50%); background: #fff; width: 1080px; border-radius:20px; overflow: hidden; max-width:calc(100% - 30px); background: linear-gradient($pointColor 10px, #fff 10px);
+        @include responsive(991px){border-radius:10px;}
+        &Top{background:$pointColor; padding: 20px 30px; display: flex; justify-content: space-between; align-content:center;
+            @include responsive(991px){padding: 5vw 6vw 4vw;}
+            .conTt{color:#fff; font-size:18px;
+                @include responsive(991px){font-size:4.3vw}
+            }
+            .btnClose{width: 20px; height: 20px; position: relative; cursor:pointer;
+                @include responsive(991px){width: 15px; height: 15px;}
+                &:before,&:after{content:''; display: block;width: 130%; background: #fff; height: 1px; position: absolute; top: 50%; left: 50%;}
+                &:before{transform:translate(-50%,-50%) rotate(45deg)}
+                &:after{transform:translate(-50%,-50%) rotate(-45deg)}
+            }
+        }
+        &Con{display: flex; padding: 50px; align-items: center;
+            @include responsive(991px){flex-direction: column; padding: 5vw 5vw 8vw; max-height:60vh; overflow-y: auto;}
+            &Img{width: 51.020%; max-height:500px; overflow-y: auto;
+                @include responsive(991px){width: 100%; overflow: visible; max-height: initial;}
+                img{width: 100%; }
+            }
+            &Txt{margin-left: 8%; width: 40.980%;
+                @include responsive(991px){margin-left: 0; width: 100%; margin-top: 8%;}
+                .cate{font-size:16px;
+                    @include responsive(991px){font-size:3.5vw}
+                }
+                .name{margin-top: 15px; @include f_Pre(20px,SemiBold,600,#333);
+                    @include responsive(991px){font-size:5vw; margin-top: 3vw;}
+                }
+                .date{margin-top: 10px;
+                    @include responsive(991px){font-size:4vw; margin-top: 2.5vw;}
+                }
+                .company{margin-top: 20px;
+                    @include responsive(991px){font-size:4vw; margin-top: 3vw;}
+                }
+                .desc{line-height: 1.6; color:#666; margin-top: 30px; 
+                    @include responsive(991px){font-size:4vw; margin-top: 5vw;}
+                }
+                .filter{display: flex; flex-wrap:wrap; margin-left: -5px; margin-top: 25px;}
+                .btnMore{display: flex; gap: 10px; }
+            }
+        }
+    }
+}

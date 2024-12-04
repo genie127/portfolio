@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 
-import './Header.scss'
+import './scss/Header.scss'
+
 const Header =()=>{
     return(
         <div className="Header">
             <div className="container">
-                <h1 class="logo">
+                <h1 className="logo">
                     <Link to="/">
                         <img src="/img/logo.svg" alt="Portfolio Shinjinhee"/>
                     </Link>

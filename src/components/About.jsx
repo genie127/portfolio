@@ -94,19 +94,19 @@ const About =()=>{
                     <div className="pro_skill">
                         <p className="pro_car_tt">Skills</p>
                         <ul className="skill">
-                            <li data-percent="100%"><span className="color"></span>HTML5</li>
-                            <li data-percent="100%"><span className="color"></span>CSS3</li>
-                            <li data-percent="100%"><span className="color"></span>Javascript</li>
-                            <li data-percent="100%"><span className="color"></span>JQuery</li>
-                            <li data-percent="100%"><span className="color"></span>React</li>
-                            <li data-percent="100%"><span className="color"></span>Node.js</li>
-                            <li data-percent="100%"><span className="color"></span>GNUBoard(php)</li>
-                            <li data-percent="100%"><span className="color"></span>Python</li>
-                            <li data-percent="100%"><span className="color"></span>Java</li>
-                            <li data-percent="100%"><span className="color"></span>MySQL</li>
-                            <li data-percent="100%"><span className="color"></span>Photoshop</li>
-                            <li data-percent="100%"><span className="color"></span>Illustration</li>
-                            <li data-percent="100%"><span className="color"></span>Figma</li>
+                            <li><span className="color" style={{width:'100%'}}></span>HTML5</li>
+                            <li><span className="color" style={{width:'95%'}}></span>CSS3</li>
+                            <li><span className="color" style={{width:'75%'}}></span>Javascript</li>
+                            <li><span className="color" style={{width:'80%'}}></span>JQuery</li>
+                            <li><span className="color" style={{width:'70%'}}></span>React</li>
+                            <li><span className="color" style={{width:'35%'}}></span>Node.js</li>
+                            <li><span className="color" style={{width:'35%'}}></span>GNUBoard(php)</li>
+                            <li><span className="color" style={{width:'30%'}}></span>Python</li>
+                            <li><span className="color" style={{width:'25%'}}></span>Java</li>
+                            <li><span className="color" style={{width:'50%'}}></span>MySQL</li>
+                            <li><span className="color" style={{width:'100%'}}></span>Photoshop</li>
+                            <li><span className="color" style={{width:'80%'}}></span>Illustration</li>
+                            <li><span className="color" style={{width:'80%'}}></span>Figma</li>
                         </ul>
                     </div>
                 </div>

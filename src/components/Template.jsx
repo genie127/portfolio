@@ -1,4 +1,4 @@
-import './Template.scss'
+import './scss/Template.scss'
 const Template =({children})=>{
     return(
         <div className="Template">
