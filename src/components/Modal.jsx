@@ -13,7 +13,6 @@ const Modal=({close})=>{
                     <div className="modalBoxCon">
                         <div className="modalBoxConImg">
                             <img src="https://placehold.co/500x650" alt="" />
-                            <img src="../data/230206.jpg" alt="" />
                         </div>
                         <div className="modalBoxConTxt">
                             <p className="cate">개인 프로젝트</p>
