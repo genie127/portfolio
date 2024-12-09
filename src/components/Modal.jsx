@@ -13,13 +13,14 @@ const Modal=({close})=>{
                     <div className="modalBoxCon">
                         <div className="modalBoxConImg">
                             <img src="https://placehold.co/500x650" alt="" />
+                            <img src="../data/work.json" alt="" />
                         </div>
                         <div className="modalBoxConTxt">
                             <p className="cate">개인 프로젝트</p>
                             <h3 className="name">날씨 API</h3>
                             <p className="date">2024.11.25 ~ 2024.11.30</p>
                             <p className="company">근무처: 파이브센스</p>
-                            <div className="desc">OepnWeather API를 활용해 작업<br />Axios, style-components, redux, swiper, router-dom 등 ㄹㄹㅇㄹㅇㄹㅇㄹ라이브러리 활용<br />반응형 지원</div>
+                            <div className="desc">OepnWeather API를 활용해 작업<br />Axios, style-components, redux, swiper, router-dom 등 라이브러리 활용<br />반응형 지원</div>
                             <ul className="filter">
                                 <FilterLi>디자인</FilterLi>
                                 <FilterLi>퍼블리싱</FilterLi>

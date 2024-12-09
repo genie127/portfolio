@@ -22,13 +22,16 @@ const Works = ()=>{
             <Wrap>
                 <div className="titleSec">
                     <h2 className="secTt">Works</h2>
-                    <ul className="filter">
-                        <li>All</li>
-                        <li className='on'>Design</li>
-                        <li>Publishing</li>
-                        <li>Front-end</li>
-                        <li>Back-end</li>
-                    </ul>
+                    <div className="filterWrap">
+                        <Button className="hidden_w">All</Button>
+                        <ul className="filter">
+                            <li>All</li>
+                            <li className='on'>Design</li>
+                            <li>Publishing</li>
+                            <li>Front-end</li>
+                            <li>Back-end</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="workSec">
                     <ul className="workList">

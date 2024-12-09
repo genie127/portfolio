@@ -7,6 +7,7 @@ export const Wrap = styled.div`
 export const FilterLi = styled.li`
 background: ${pointColor}; color:#fff; font-size:14px; padding: 5px 10px; border-radius:3px; margin: 5px 2.5px 0; @media(max-width:420px){font-size:3.7vw; padding: 2vw 3vw 1.8vw;}`
 
-export const Button = styled.div`border:1px solid ${pointColor}; padding: ${(props)=>props.$p ||'20px'}; color:${pointColor}; font-family: 'Arimo', sans-serif; font-style: italic; display: block; width: ${(props)=>props.$w || '300px'}; margin: ${(props)=>props.$m || '50px auto 0'}; text-align: center; font-size:${(props)=>props.$fz || '16px'}; transition:.3s; cursor:pointer;
+export const Button = styled.div`border:1px solid ${pointColor}; padding: ${(props)=>props.$p ||'20px'}; color:${pointColor}; font-family: 'Arimo', sans-serif; font-style: italic; display: block; width: ${(props)=>props.$w || '300px'}; margin: ${(props)=>props.$m || '50px auto 0'}; text-align: center; font-size:${(props)=>props.$fz || '16px'}; transition:.3s; cursor:pointer; max-width:100%;
      &:hover{background: ${pointColor}; color:#fff}
+     @media(max-width:991px){padding: ${(props)=>props.$mp ||'10px'}; margin:${(props)=>props.$mm || '30px auto 0'};}
 `
