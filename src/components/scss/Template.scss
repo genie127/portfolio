@@ -43,7 +43,7 @@ $shadeColor:#C9E295;
 $secColor:#82A553;
 
 *{box-sizing: border-box; color:#333;}
-body{background:url(../../../public/img/background.png) repeat center center/200% auto; @include f_Pre(16px, Regular, 400, #333)}
+body{background:url(../../../public/img/background.png) repeat center top/200% auto; @include f_Pre(16px, Regular, 400, #333)}
 .hidden_m{
     @include responsive(991px){display: none !important;}
 }

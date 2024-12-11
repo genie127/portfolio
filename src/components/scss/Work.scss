@@ -5,7 +5,7 @@
         @include responsive(991px){flex-direction: column;}
     }
     .titleSec{ width: 425px; position: sticky; top: 0; z-index: 2;
-        @include responsive(991px){width: 100%; background: #fff; padding-bottom: 3vw;}
+        @include responsive(991px){width: 100%; background: #fff; padding:9vw 0 3vw;}
         .filter{margin-top: 20px;
             @include responsive(991px){margin-top: 2vw; display: none;
                 border:1px solid $secColor; margin-top: 0;
@@ -26,7 +26,7 @@
         }
         &List{display: flex; flex-wrap:wrap;}
         &Item{width:46.27%;height: 0; padding-bottom: 63.585%; position: relative; border:2px solid transparent; cursor:pointer;
-            @include responsive(991px){width: 100%; padding-bottom: 120%;border-width:1px;
+            @include responsive(991px){width: 100%; padding-bottom: 100%;border-width:1px;
                 + li{margin-top: 12%;}
                 img{filter:blur(0)}
             }
