@@ -6,7 +6,6 @@ const Skill = ()=>{
 
     const skillBarMobOn =()=>{
         const skill_li = document.querySelectorAll('.skill li');
-
         for(var i=0; i<skill_li.length; i++){
             if(window.innerWidth < 991){            
                 skill_li[i].querySelector(".color").style.width=skill_li[i].getAttribute("data-percent")

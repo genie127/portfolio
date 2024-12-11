@@ -1,7 +1,7 @@
 import './scss/Work.scss'
 import { useDispatch, useSelector } from "react-redux"; 
 import { fetchWorks } from "../features/works/worksSlice";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button, Wrap } from '../style/StyledComponents'
 import './scss/Main.scss'
 import WorkList from './WorkList'
@@ -9,6 +9,7 @@ import WorkList from './WorkList'
 
 
 const Works = ()=>{
+
     //게시글 목록, 상세
     const dispatch = useDispatch();
     const {works, loading, error} = useSelector((state)=>(state.works));
@@ -24,22 +25,22 @@ const Works = ()=>{
         
     const [isOpen, setIsOpen] = useState(false)
     const [dataId, setDataId] = useState(0)
-    const openPopup=async(id)=>{
+
+    const openPopup=useCallback(async(id)=>{
         setDataId(id)
         setIsOpen(true);
         document.querySelector('body').style.overflow='hidden'
+    },[setDataId, setIsOpen])
 
-
-    }
-    const closePopup=()=>{
+    const closePopup=useCallback(()=>{
         setIsOpen(false)
         document.querySelector('body').style.overflow='auto'
+    },[setIsOpen])
 
-    }
     const openDrop=()=>{
         document.querySelector('.filter').classList.toggle("on")
     }
-    const selectFilter =(id)=>{
+    const selectFilter =useCallback((id)=>{
         setSelectedCate(id);
         var cate = '';        
         if(id==="디자인"){
@@ -58,7 +59,7 @@ const Works = ()=>{
         if(document.querySelector('.filter').classList.contains("on")){
             document.querySelector('.filter').classList.remove("on")
         }
-    }
+    },[setSelectedCate])
 
     if(loading){
         return <p>Loading...</p>

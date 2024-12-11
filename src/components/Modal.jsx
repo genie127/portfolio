@@ -1,21 +1,7 @@
-import { useEffect } from 'react';
 import { Button, FilterLi } from '../style/StyledComponents';
 import './scss/Modal.scss'
 
 const Modal=({close, worksDetail})=>{
-    useEffect(() => {
-        const modalBoxCon = document.querySelector('.modalBoxCon');
-        // 모달이 열릴 때, .modalBoxCon의 스크롤을 맨 위로 설정
-        if (modalBoxCon) {
-            console.log(modalBoxCon.scrollTop)
-            modalBoxCon.scrollTop = -9999; // 스크롤을 맨 위로 설정
-        }
-    }, []);
-
-   
-    
-
-    console.log()
     return(
         <div className="Modal">
             <div className="modalBg">

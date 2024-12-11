@@ -4,23 +4,6 @@ import Career from "./Career";
 import Skill from "./Skill";
 
 const About =()=>{
-
-    
-    const skill_li = document.querySelectorAll('.skill_li li'),
-    pointColor = '#467A00';
-    ;
-
-    skill_li.forEach(function(e, idx){
-        e.addEventListener('mouseenter', function(){
-            e.style.backgroundImage = `linear-gradient(90deg, #fff 0%, #fff ${e.getAttribute('data-percent')}, ${pointColor} ${e.getAttribute('data-percent')})`
-            e.querySelector('.color').style.width = e.getAttribute('data-percent')
-        })
-        e.addEventListener('mouseleave', function(){
-            e.style.backgroundImage = 'none'
-            e.querySelector('.color').style.width = 0
-        })
-    })
-
     return(
         <div className="About section">
             <Wrap>
