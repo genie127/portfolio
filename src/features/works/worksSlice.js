@@ -1,9 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getWorks } from "../../api/WorkApi";
+import { getWorks, getWorksDetail } from "../../api/WorkApi";
 
 export const fetchWorks = createAsyncThunk('works/fetchWorks', async()=>{
     const response = await getWorks();
-    console.log(response)
+    return response;
+
+})
+export const fetchWorksDetail = createAsyncThunk('works/fetchWorksDetail', async(id)=>{
+    const response = await getWorksDetail(id);
     return response;
 
 })
@@ -14,6 +18,7 @@ const workSlice = createSlice({
         loading:false,
         error:null,
         works:[],
+        worksDetail:null,
     },
     reducers:{},
 
@@ -28,6 +33,18 @@ const workSlice = createSlice({
                 state.works = action.payload
             })
             .addCase(fetchWorks.rejected,(state,action)=>{
+                state.loading=false
+                state.error = action.error.message
+            })
+            .addCase(fetchWorksDetail.pending,(state)=>{
+                state.loading=true
+                state.error = null
+            })
+            .addCase(fetchWorksDetail.fulfilled,(state,action)=>{
+                state.loading=false
+                state.worksDetail = action.payload
+            })
+            .addCase(fetchWorksDetail.rejected,(state,action)=>{
                 state.loading=false
                 state.error = action.error.message
             })

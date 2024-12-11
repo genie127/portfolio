@@ -12,3 +12,9 @@ export const getWorks =async()=>{
     return response.data
         
 }
+
+export const getWorksDetail =async(id)=>{
+    const response = await axios.get('/data/work.json')
+    return response.data[id]
+        
+}

@@ -17,13 +17,13 @@
             }
         }
         &Con{display: flex; padding: 50px; align-items: center;
-            @include responsive(991px){flex-direction: column; padding: 5vw 5vw 8vw; max-height:60vh; overflow-y: auto;}
+            @include responsive(991px){flex-direction: column-reverse; padding: 5vw 5vw 8vw; max-height:60vh; overflow-y: auto;}
             &Img{width: 51.020%; max-height:500px; overflow-y: auto;
                 @include responsive(991px){width: 100%; overflow: visible; max-height: initial;}
                 img{width: 100%; }
             }
             &Txt{margin-left: 8%; width: 40.980%;
-                @include responsive(991px){margin-left: 0; width: 100%; margin-top: 8%;}
+                @include responsive(991px){margin-left: 0; width: 100%; margin-bottom: 8%;}
                 .cate{font-size:16px;
                     @include responsive(991px){font-size:3.5vw}
                 }
@@ -34,9 +34,9 @@
                     @include responsive(991px){font-size:4vw; margin-top: 2.5vw;}
                 }
                 .company{margin-top: 20px;
-                    @include responsive(991px){font-size:4vw; margin-top: 3vw;}
+                    @include responsive(991px){font-size:4vw; margin-top: 4vw;}
                 }
-                .desc{line-height: 1.6; color:#666; margin-top: 30px; 
+                .desc{line-height: 1.6; color:#666; margin-top: 30px; white-space: pre-wrap;
                     @include responsive(991px){font-size:4vw; margin-top: 5vw;}
                 }
                 .filter{display: flex; flex-wrap:wrap; margin-left: -5px; margin-top: 25px;}
