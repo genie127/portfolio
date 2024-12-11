@@ -17,7 +17,7 @@
             }
         }
         &Con{display: flex; padding: 50px; align-items: center;
-            @include responsive(991px){flex-direction: column; padding: 5vw 5vw 8vw; max-height:60vh; overflow-y: auto;}
+            @include responsive(991px){flex-direction: column; padding: 5vw 5vw 8vw; max-height:75vh; overflow-y: auto;}
             &Img{width: 51.020%; max-height:500px; overflow-y: auto;
                 @include responsive(991px){width: 100%; overflow: visible; max-height: initial;}
                 img{width: 100%; }
