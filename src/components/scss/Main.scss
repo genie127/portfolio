@@ -9,7 +9,7 @@
 }
 .Main{
     >div{width: auto;
-        @include responsive(991px){margin-top: -15vw;}
+        @include responsive(991px){margin-top: -25vw;}
     }
     .scroll{text-align: center; position: absolute; bottom: 30px;
         @include responsive(480px){
