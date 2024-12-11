@@ -15,7 +15,11 @@ const Skill = ()=>{
             }
         }
     }
-    skillBarMobOn();
+    
+    window.addEventListener('load', function(){
+        skillBarMobOn();
+    })
+
     window.addEventListener('resize', function(){
         skillBarMobOn();
 

@@ -1,3 +1,4 @@
+import './scss/About.scss'
 import { Wrap } from "../style/StyledComponents";
 import Career from "./Career";
 import Skill from "./Skill";

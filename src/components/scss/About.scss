@@ -1,0 +1,97 @@
+@import './Template.scss';
+
+.About{
+    .pro{
+        &file{display: flex; flex-wrap: wrap; align-items: flex-start; 
+            @include responsive(1280px){flex-direction: column;}
+            .secTt{position: absolute; left: -20%; bottom: 85%; z-index: 2;
+                @include responsive(1620px){left: -15px;}
+                @include responsive(991px){bottom: 93%;}
+            }
+        }
+        &_pic{position: relative; width: 29.569%; margin-right: 10%; 
+            @include responsive(1620px){width: 38%; margin: 0 auto}
+            @include responsive(991px){width: 100%; margin: 0 auto}
+            p{font-size:60px; font-family: "Volkhov", serif; font-style: italic; color:$pointColor; position: absolute; z-index: 1; left: 100%; top: 100%; transform:translate(-50%,-50%);
+                @include responsive(991px){right: -10px; left: initial; transform:translate(0,-50%); font-size:10vw}
+                &:before{content:'me'; -webkit-text-stroke: 14px #fff; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); z-index: -1;
+                    @include responsive(991px){-webkit-text-stroke: 10px #fff;}
+                }
+            }
+            &_photo{ border:2px solid $pointColor; background: url('../../../public/img/genie.png') no-repeat center center/cover; height: 505px; width: 100%;
+                @include responsive(1620px){height: 50vw;}
+                @include responsive(991px){height: 100vw; border-width:1px}
+                
+                &:before,&:after{content:''; display: block; width: 12px;height: 12px; background: #fff; border:2px solid $pointColor; position: absolute; left: 50%; transform:translate(-50%,-50%);
+                    @include responsive(991px){width: 2vw; height: 2vw;border-width:1px;} 
+                }
+                &:before{top:0}
+                &:after{top:100%}
+               
+            }
+        }
+        &_car{
+            @include responsive(1280px){padding-top: 12vw;}
+            &_tt{font-family:'Arimo'; font-weight:700; font-style:italic; font-size: 24px; letter-spacing: 0.17em; width: 175px;
+                @include responsive(991px){font-size:5vw; margin-bottom: 5vw;}
+            }
+            &_con{
+                display: flex; 
+                @include responsive(991px){flex-direction: column}
+                ul{
+                    li{
+                        p{@include f_Pre(16px,Regular,400,#333); letter-spacing: 0.17em;
+                            @include responsive(991px){
+                                @include f_Pre(3.5vw,Regular,400,#333)
+                            }
+                            &.date{@include f_Pre(16px,Semibold,600,#333);
+                                @include responsive(991px){
+                                    @include f_Pre(3.5vw,Semibold,600,#333);
+                                }
+                                &+p{margin-top: 5px;
+                                    @include responsive(991px){margin-top: 1.5vw;}
+                                }
+                            }
+                        }
+                        span{color:#999; font-size:14px;
+                            @include responsive(991px){display: inline-block; font-size:3.3vw; line-height: 2;}
+                        }
+                        &+li{margin-top: 15px;
+                            @include responsive(991px){margin-top: 7vw;}
+                        }
+                        
+                    }
+                }
+                &:first-child{
+                    ul{
+                        li{
+                            &+li{margin-top: 9px;}
+                        }
+                    }
+                }
+                &+.pro_car_con{margin-top: 40px;
+                    @include responsive(991px){margin-top: 10vw;}
+                }
+            }
+        }
+        &_skill{width: 100%; margin-top:60px; display: flex;
+            @include responsive(991px){flex-direction: column;}
+            .skill{display: flex; flex-wrap: wrap; margin-top: 20px; margin-left: -7.5px;
+                li{padding: 8px 15px; border:1px solid $shadeColor; margin: 0 7.5px 7.5px; position: relative; transition:.3s;font-family:'Arimo', sans-serif; font-size:18px; color:#333; font-style: italic; letter-spacing: 0.17em; transition:.3s; cursor:default; 
+                    @include responsive(991px){font-size:3.5vw; color:$secColor; }
+                    .color{background: $pointColor; position: absolute; left: 0; top: 0; bottom: 0; z-index: -1; width: 0; transition:.3s;
+                        @include responsive(991px){width: auto;}
+                    }
+                    &:after{content:''; display: block;width: 8px; height: 8px; border:1px solid $pointColor; position: absolute;top: 0; left: 100%; transform:translate(-50%,-50%); opacity:0; transition:.3s;
+                        @include responsive(991px){width: 1.5vw; height: 1.5vw; opacity:1}
+                    }
+                    &:hover{
+                        border-color:$pointColor;  color:$secColor;
+                        &:after{opacity:1}
+                    
+                    }
+                }
+            }
+        }
+    }
+}   

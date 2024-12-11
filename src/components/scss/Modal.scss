@@ -25,19 +25,19 @@
             &Txt{margin-left: 8%; width: 40.980%;
                 @include responsive(991px){margin-left: 0; width: 100%; margin-bottom: 8%;}
                 .cate{font-size:16px;
-                    @include responsive(991px){font-size:3.5vw}
+                    @include responsive(991px){font-size:3.8vw}
                 }
                 .name{margin-top: 15px; @include f_Pre(20px,SemiBold,600,#333);
-                    @include responsive(991px){font-size:5vw; margin-top: 3vw;}
+                    @include responsive(991px){font-size:4.8vw; margin-top: 3vw;}
                 }
                 .date{margin-top: 10px;
-                    @include responsive(991px){font-size:4vw; margin-top: 2.5vw;}
+                    @include responsive(991px){font-size:3.8vw; margin-top: 2.5vw;}
                 }
                 .company{margin-top: 20px;
-                    @include responsive(991px){font-size:4vw; margin-top: 4vw;}
+                    @include responsive(991px){font-size:3.8vw; margin-top: 4vw;}
                 }
                 .desc{line-height: 1.6; color:#666; margin-top: 30px; white-space: pre-wrap;
-                    @include responsive(991px){font-size:4vw; margin-top: 5vw;}
+                    @include responsive(991px){font-size:3.8vw; margin-top: 5vw;}
                 }
                 .filter{display: flex; flex-wrap:wrap; margin-left: -5px; margin-top: 25px;}
                 .btnMore{display: flex; gap: 10px; }

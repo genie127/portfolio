@@ -1,3 +1,4 @@
+import './scss/Work.scss'
 import { useDispatch, useSelector } from "react-redux"; 
 import { fetchWorks } from "../features/works/worksSlice";
 import { useEffect, useState } from "react";
@@ -17,8 +18,8 @@ const Works = ()=>{
   
 
     //필터적용
-    const [selectedCate, setSelectedCate] = useState("all")
-    const filteredList = selectedCate ==="all" ? works : works.filter((item)=> item.filter.includes(selectedCate))
+    const [selectedCate, setSelectedCate] = useState("All")
+    const filteredList = selectedCate ==="All" ? works : works.filter((item)=> item.filter.includes(selectedCate))
 
         
     const [isOpen, setIsOpen] = useState(false)
@@ -27,6 +28,8 @@ const Works = ()=>{
         setDataId(id)
         setIsOpen(true);
         document.querySelector('body').style.overflow='hidden'
+
+
     }
     const closePopup=()=>{
         setIsOpen(false)
@@ -38,6 +41,20 @@ const Works = ()=>{
     }
     const selectFilter =(id)=>{
         setSelectedCate(id);
+        var cate = '';        
+        if(id==="디자인"){
+            cate = "Design"
+        }else if(id==="퍼블리싱"){
+            cate = "Publishing"
+        }else if(id==="프론트엔드"){
+            cate = "Front-end"
+        }else if(id==="백엔드"){
+            cate = "Back-end"
+        }else{
+            cate = "All"
+        }
+
+        document.querySelector(".m_filter").innerText=cate;
         if(document.querySelector('.filter').classList.contains("on")){
             document.querySelector('.filter').classList.remove("on")
         }
@@ -55,9 +72,9 @@ const Works = ()=>{
                 <div className="titleSec">
                     <h2 className="secTt">Works</h2>
                     <div className="filterWrap">
-                        <Button className="hidden_w" onClick={()=>{openDrop()}} style={{width:"100%"}}>All</Button>
+                        <Button className="hidden_w m_filter" onClick={()=>{openDrop()}} style={{width:"100%", letterSpacing:"0.17em"}}>All</Button>
                         <ul className="filter">
-                            <li className={`${selectedCate === "all" ? "on" : ""}`} onClick={()=>{selectFilter('all')}}>All</li>
+                            <li className={`${selectedCate === "All" ? "on" : ""}`} onClick={()=>{selectFilter('All')}}>All</li>
                             <li className={`${selectedCate === "디자인" ? "on" : ""}`} onClick={()=>selectFilter('디자인')}>Design</li>
                             <li className={`${selectedCate === "퍼블리싱" ? "on" : ""}`} onClick={()=>selectFilter('퍼블리싱')}>Publishing</li>
                             <li className={`${selectedCate === "프론트엔드" ? "on" : ""}`} onClick={()=>selectFilter('프론트엔드')}>Front-end</li>

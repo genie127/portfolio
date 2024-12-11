@@ -1,0 +1,73 @@
+@import './Template.scss';
+
+.Works{
+    >div{display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start;
+        @include responsive(991px){flex-direction: column;}
+    }
+    .titleSec{ width: 425px; position: sticky; top: 0; z-index: 2;
+        @include responsive(991px){width: 100%; background: #fff; padding-bottom: 3vw;}
+        .filter{margin-top: 20px;
+            @include responsive(991px){margin-top: 2vw; display: none;
+                border:1px solid $secColor; margin-top: 0;
+                &.on{display: block;}
+            }
+            li{font-family: 'Arimo', sans-serif; font-style: italic; font-size:16px; color:#666; letter-spacing: 0.17em; padding: 10px 20px; border:1px solid $pointColor; display: inline-block; border-radius:20px; margin-right: 10px; margin-top: 20px; position: relative; transition:.3s; cursor:pointer;
+                @include responsive(991px){font-size:3.5vw; padding: 2.5vw; border-radius:0; width: 100%; border:none; margin-top: 0; text-align: center;}
+                &:hover{color:#fff; background: $secColor;}
+                &.on{background: $pointColor; color:#fff; padding-right: 35px;
+                    &:after{content:''; display: block; position: absolute; right: 18px; top: 50%; transform:translateY(-38%) rotate(45deg); width: 5px; height: 5px; border-width:1px 1px 0 0; border-color:#fff; border-style: solid;}
+                }
+            }
+        }
+    }
+    .work{
+        &Sec{width: 46.527%; 
+            @include responsive(991px){width: 100%; margin-top: 7vw;}
+        }
+        &List{display: flex; flex-wrap:wrap;}
+        &Item{width:46.27%;height: 0; padding-bottom: 63.585%; position: relative; border:2px solid transparent; cursor:pointer;
+            @include responsive(991px){width: 100%; padding-bottom: 120%;border-width:1px;
+                + li{margin-top: 12%;}
+                img{filter:blur(0)}
+            }
+            &:before{content:''; display: block; position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,.5); box-shadow: 4px 4px 10px rgba(0,0,0,0); opacity:1; transition:.3s;
+            }
+            &:nth-child(2n){margin-left: 7.462%;margin-top: 7.462%;
+                @include responsive(991px){margin-left: 0; margin-top: 12%;}
+            }
+            &:hover{ border-color:$pointColor; box-shadow: 4px 4px 10px rgba(0,0,0,.2); 
+                .work{
+                    &Name,&Date,&Cate{color:$pointColor}
+                }
+                &:before{opacity:0;
+                }
+                img{filter:blur(0)}
+                @include responsive(991px){box-shadow: 2px 2px 5px rgba(0,0,0,.2);}
+            }
+        }
+        &Img{width: 100%; height: 100%; position: absolute; z-index: -1; overflow: hidden;
+            img{width: 100%; height: 100%; object-fit: cover; object-position: center top; filter:blur(2px)}
+        }
+        &Txt{position: absolute; top: 0; bottom: 0; right: 0;left: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 35px 30px;
+            @include responsive(991px){
+                padding: 6vw 5vw;
+            }
+        }
+        &Awards{position: absolute; top: 0; right: 15px; display: flex;
+            @include responsive(1440px){ height: 15%;}
+            img{max-height: 100%;}
+        }
+        &Cate{color:#fff; font-size:15px;
+            @include responsive(991px){font-size:4vw}
+        }
+        &Name{margin-top: 15px; font-size:20px; font-weight:600; color:#fff;
+            @include responsive(991px){font-size:5.5vw; margin-top: 4.5vw;}
+        }
+        &Date{color:#fff; font-size: 15px; margin-top: 8px;
+            @include responsive(991px){font-size:3.5vw; margin-top: 2vw;}
+        }
+        &Filter{margin-top: 15px; display: flex; flex-wrap:wrap; margin-left: -5px;
+            @include responsive(991px){margin-top: 3vw;}
+        }
+    }
+}
