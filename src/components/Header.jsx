@@ -20,7 +20,7 @@ const Header =()=>{
       });
     const secScroll=(offsetTop)=>{
         const secOffset = document.querySelector(offsetTop).offsetTop;
-        window.scrollTo(0,secOffset)
+        window.scrollTo({left: 0,top: secOffset, behavior:'smooth'})
         console.log(secOffset)
     }
     
