@@ -6,8 +6,8 @@ const Career=()=>{
                 <ul>
                     <li><p>신진희 <span>1997.01.27</span></p></li>
                     <li><p>인천광역시 부평구</p></li>
-                    <li><p><a href="mailto:k-vll0i27@daum.net">k-vll0i27@daum.net</a></p></li>
-                    <li><p><a href="https://github.com/genie127">https://github.com/genie127</a></p></li>
+                    <li><p><a href="mailto:k-vll0i27@daum.net" target="_blank">k-vll0i27@daum.net</a></p></li>
+                    <li><p><a href="https://github.com/genie127" target="_blank">https://github.com/genie127</a></p></li>
                 </ul>
             </div>
             <div className="pro_car_con">
