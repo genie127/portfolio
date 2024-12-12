@@ -39,6 +39,7 @@ const Skill = ()=>{
             <ul className="skill">
                 <li data-percent={'100%'} ref={(el)=> skillRef.current[1]=el} onMouseEnter={()=>skillBarOn('100%',1)} onMouseLeave={()=>skillBarOff(1)} ><span className="color"></span>HTML5</li>
                 <li data-percent={'95%'} ref={(el)=> skillRef.current[2]=el} onMouseEnter={()=>skillBarOn('95%',2)} onMouseLeave={()=>skillBarOff(2)} ><span className="color"></span>CSS3</li>
+                <li data-percent={'85%'} ref={(el)=> skillRef.current[0]=el} onMouseEnter={()=>skillBarOn('85%',0)} onMouseLeave={()=>skillBarOff(0)} ><span className="color"></span>SCSS(sass)</li>
                 <li data-percent={'75%'} ref={(el)=> skillRef.current[3]=el} onMouseEnter={()=>skillBarOn('75%',3)} onMouseLeave={()=>skillBarOff(3)} ><span className="color"></span>Javascript</li>
                 <li data-percent={'80%'} ref={(el)=> skillRef.current[4]=el} onMouseEnter={()=>skillBarOn('80%',4)} onMouseLeave={()=>skillBarOff(4)} ><span className="color"></span>JQuery</li>
                 <li data-percent={'70%'} ref={(el)=> skillRef.current[5]=el} onMouseEnter={()=>skillBarOn('70%',5)} onMouseLeave={()=>skillBarOff(5)} ><span className="color"></span>React</li>

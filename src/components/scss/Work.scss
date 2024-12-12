@@ -4,7 +4,7 @@
     >div{display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start;
         @include responsive(991px){flex-direction: column;}
     }
-    .titleSec{ width: 425px; position: sticky; top: 0; z-index: 2;
+    .titleSec{ width: 425px; position: sticky; top: 75px; z-index: 2;
         @include responsive(991px){width: 100%; background: #fff; padding:9vw 0 3vw;}
         .filter{margin-top: 20px;
             @include responsive(991px){margin-top: 2vw; display: none;

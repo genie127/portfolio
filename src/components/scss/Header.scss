@@ -1,6 +1,6 @@
 @import './Template.scss';
 
-.Header{padding: 15px 0 10px; @include hide; position: fixed;top: 0; left: 0; right: 0; z-index: 8; background: rgba(255,255,255,.5);
+.Header{padding: 15px 0 10px; @include hide; position: fixed;top: 0; left: 0; right: 0; z-index: 3; background: rgba(255,255,255,.5);
 
     @include responsive(991px){
         padding: 2vw 0 1.3vw;

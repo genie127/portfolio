@@ -8,7 +8,7 @@
         "gd":false,
         "wa":false,
         "company":"",
-        "desc":"피그마로 디자인작업 \n로컬 json 데이터 파일를 활용해 작업\nAxios, style-components, redux 등 라이브러리 활용\n반응형 지원",
+        "desc":"React, SCSS 반응형 사이트\n피그마로 디자인작업 \n로컬 json 데이터 파일 Axios로 연동\nstyle-components, redux 등 라이브러리 활용",
         "filter":["디자인","퍼블리싱","프론트엔드"],
         "web":"https://shin-jinhee.netlify.app",
         "github":"https://github.com/genie127/portfolio"
@@ -24,8 +24,8 @@
         "company":"",
         "desc":"OepnWeather API를 활용해 작업\nAxios, style-components, redux, swiper, router-dom 등 라이브러리 활용\n반응형 지원",
         "filter":["디자인","퍼블리싱","프론트엔드"],
-        "web":"https://weatehr127.netlify.app",
-        "github":"https://github.com/genie127/weather"
+        "web":"https://weather127.netlify.app",
+        "github":"https://github.com/genie127/weather_api"
     },
     {
         "id":2 ,
@@ -64,7 +64,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"풀페이지, 팝업 이중 슬라이더, 반응형",
+        "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n 풀페이지, 팝업 이중 슬라이더",
         "filter":["퍼블리싱"],
         "web":"http://whb.prettybusy.kr/",
         "github":""
@@ -78,7 +78,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\n셀프견적페이지(관리비 간편진단 스텝)",
+        "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n셀프견적페이지(관리비 간편진단 스텝)",
         "filter":["퍼블리싱"],
         "web":"https://soyoupartners.com/",
         "github":""
@@ -92,7 +92,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"풀페이지, 반응형\n주가현황 그래프 및 도표",
+        "desc":"그누보드(php), 바닐라 자바스크립트, SCSS, 반응형 홈페이지\n풀페이지, 주가현황 그래프 및 도표",
         "filter":["퍼블리싱"],
         "web":"https://www.sandslab.io/",
         "github":""
@@ -106,7 +106,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\n주요실적 게시판 커스텀",
+        "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n주요실적 게시판 커스텀",
         "filter":["퍼블리싱"],
         "web":"https://www.ssonsa.com/",
         "github":""
@@ -120,13 +120,13 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\n게시판 커스텀",
+        "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n게시판 커스텀",
         "filter":["퍼블리싱"],
         "web":"https://hpmpc.org/",
         "github":""
     },
     {
-        "id": 13,
+        "id": 9,
         "img":"/img/medical.png",
         "cate":"프로젝트_의료",
         "name":"대한정형외과학회",
@@ -134,13 +134,13 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형, 하드코딩 \n게시판 및 페이지 커스텀",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트,  \n 전체 하드코딩, 게시판 및 페이지 커스텀",
         "filter":["퍼블리싱"],
-        "web":"https://www.blessbean.co.kr/",
+        "web":"https://www.koa.or.kr/",
         "github":""
     },
     {
-        "id": 9,
+        "id": 10,
         "img":"/img/blessbean.png",
         "cate":"프로젝트_쇼핑몰",
         "name":"블레스빈",
@@ -148,13 +148,13 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\n원클릭주문 상품페이지 커스텀",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트\n원클릭주문 상품페이지 커스텀",
         "filter":["퍼블리싱"],
         "web":"https://www.blessbean.co.kr/",
         "github":""
     },
     {
-        "id": 10,
+        "id": 11,
         "img":"/img/strato.png",
         "cate":"프로젝트_솔루션",
         "name":"스트라토",
@@ -162,13 +162,13 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\nOn Air 게시판 커스텀\n채용공고 입사지원페이지(스텝 폼)\n스트라토 생활 게시판 슬라이드화 커스텀",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트\nOn Air 게시판 커스텀\n채용공고 입사지원페이지(스텝 폼)\n스트라토 생활 게시판 슬라이드화 커스텀",
         "filter":["퍼블리싱"],
-        "web":"https://www.blessbean.co.kr/",
+        "web":"https://www.strato.co.kr/",
         "github":""
     },
     {
-        "id": 11,
+        "id": 12,
         "img":"/img/kanak.png",
         "cate":"프로젝트_통합 결제서비스",
         "name":"커넥_ePAYDAY",
@@ -176,13 +176,13 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형, 키프레임 애니메이션\n결제내역조회 페이지(스텝)\n채용공고 입사지원페이지(스텝 폼)\n스트라토 생활 게시판 슬라이드화 커스텀",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트\n키프레임 애니메이션, 결제내역조회 페이지(스텝)",
         "filter":["퍼블리싱"],
         "web":"https://www.epayday.co.kr/",
         "github":""
     },
     {
-        "id": 12,
+        "id": 13,
         "img":"/img/space.png",
         "cate":"프로젝트_방송국",
         "name":"스튜디오 스페이스 래빗",
@@ -190,7 +190,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형, 키프레임 애니메이션\nWorks 게시판 커스텀",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트\n키프레임 애니메이션, Works 게시판 커스텀",
         "filter":["퍼블리싱"],
         "web":"http://fs220222.dothome.co.kr/",
         "github":""
@@ -204,7 +204,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\n뉴스레터 구독신청 폼",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트\n뉴스레터 구독신청 폼",
         "filter":["퍼블리싱"],
         "web":"https://www.kuva.or.kr/",
         "github":""
@@ -218,7 +218,7 @@
         "gd":false,
         "wa":false,
         "company":"파이브센스",
-        "desc":"반응형\n책 게시판 커스텀",
+        "desc":"그누보드(php), jQeury 활용 반응형 사이트\n책 게시판 커스텀",
         "filter":["퍼블리싱"],
         "web":"http://www.miraebook.co.kr/",
         "github":""
