@@ -10,7 +10,7 @@
         "company":"",
         "desc":"React, SCSS 반응형 사이트\n피그마로 디자인작업 \n로컬 json 데이터 파일 Axios로 연동\nstyle-components, redux 등 라이브러리 활용",
         "filter":["디자인","퍼블리싱","프론트엔드"],
-        "use":["React","SCSS","Figma"],
+        "use":["React","Redux","SCSS","Figma"],
         "web":"https://shin-jinhee.netlify.app",
         "github":"https://github.com/genie127/portfolio"
     },
