@@ -10,6 +10,7 @@
         "company":"",
         "desc":"React, SCSS 반응형 사이트\n피그마로 디자인작업 \n로컬 json 데이터 파일 Axios로 연동\nstyle-components, redux 등 라이브러리 활용",
         "filter":["디자인","퍼블리싱","프론트엔드"],
+        "use":["React","SCSS","Figma"],
         "web":"https://shin-jinhee.netlify.app",
         "github":"https://github.com/genie127/portfolio"
     },
@@ -24,6 +25,7 @@
         "company":"",
         "desc":"OepnWeather API를 활용해 작업\nAxios, style-components, redux, swiper, router-dom 등 라이브러리 활용\n반응형 지원",
         "filter":["디자인","퍼블리싱","프론트엔드"],
+        "use":["React","OpenAPI_Redux","SCSS", "Photoshop"],
         "web":"https://weather127.netlify.app",
         "github":"https://github.com/genie127/weather_api"
     },
@@ -38,6 +40,7 @@
         "company":"",
         "desc":"JAVA, React, MySQL 활용\n피그마로 디자인작업 \n관리자페이지 기획\n책 대여하기 게시판 CRUD 작업",
         "filter":["디자인","퍼블리싱","프론트엔드","백엔드"],
+        "use":["JAVA 스프링","React","MySQL","Figma"],
         "web":"https://bookcrowd-d1777.web.app/",
         "github":"https://github.com/hdg4132/Bookcrowd2"
     },
@@ -52,6 +55,7 @@
         "company":"",
         "desc":"Node.js, React, MySQL 활용\n피그마로 디자인작업 \n요즘영화 게시판 CRUD 작업",
         "filter":["디자인","퍼블리싱","프론트엔드","백엔드"],
+        "use":["Node.js","React","MySQL","Figma"],
         "web":"",
         "github":"https://github.com/genie127/come2cinema"
     },
@@ -66,6 +70,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n 풀페이지, 팝업 이중 슬라이더",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","SCSS","Javascript"],
         "web":"http://whb.prettybusy.kr/",
         "github":""
     },
@@ -80,6 +85,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n셀프견적페이지(관리비 간편진단 스텝)",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","SCSS","Javascript"],
         "web":"https://soyoupartners.com/",
         "github":""
     },
@@ -94,6 +100,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), 바닐라 자바스크립트, SCSS, 반응형 홈페이지\n풀페이지, 주가현황 그래프 및 도표",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","SCSS","Javascript"],
         "web":"https://www.sandslab.io/",
         "github":""
     },
@@ -108,6 +115,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n주요실적 게시판 커스텀",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","SCSS","Javascript"],
         "web":"https://www.ssonsa.com/",
         "github":""
     },
@@ -122,6 +130,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), 바닐라 자바스크립트, SCSS 활용 반응형 사이트\n게시판 커스텀",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","SCSS","Javascript"],
         "web":"https://hpmpc.org/",
         "github":""
     },
@@ -136,6 +145,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), jQeury 활용 반응형 사이트,  \n 전체 하드코딩, 게시판 및 페이지 커스텀",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "web":"https://www.koa.or.kr/",
         "github":""
     },
@@ -150,6 +160,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), jQeury 활용 반응형 사이트\n원클릭주문 상품페이지 커스텀",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "web":"https://www.blessbean.co.kr/",
         "github":""
     },
@@ -163,7 +174,8 @@
         "wa":false,
         "company":"파이브센스",
         "desc":"그누보드(php), jQeury 활용 반응형 사이트\nOn Air 게시판 커스텀\n채용공고 입사지원페이지(스텝 폼)\n스트라토 생활 게시판 슬라이드화 커스텀",
-        "filter":["퍼블리싱"],
+        "filter":["퍼블리싱"],        
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "web":"https://www.strato.co.kr/",
         "github":""
     },
@@ -178,6 +190,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), jQeury 활용 반응형 사이트\n키프레임 애니메이션, 결제내역조회 페이지(스텝)",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "web":"https://www.epayday.co.kr/",
         "github":""
     },
@@ -192,6 +205,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), jQeury 활용 반응형 사이트\n키프레임 애니메이션, Works 게시판 커스텀",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "web":"http://fs220222.dothome.co.kr/",
         "github":""
     },
@@ -207,6 +221,7 @@
         "desc":"그누보드(php), jQeury 활용 반응형 사이트\n뉴스레터 구독신청 폼",
         "filter":["퍼블리싱"],
         "web":"https://www.kuva.or.kr/",
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "github":""
     },
     {
@@ -220,6 +235,7 @@
         "company":"파이브센스",
         "desc":"그누보드(php), jQeury 활용 반응형 사이트\n책 게시판 커스텀",
         "filter":["퍼블리싱"],
+        "use":["그누보드(php)","HTML5","CSS3","jQuery"],
         "web":"http://www.miraebook.co.kr/",
         "github":""
     }

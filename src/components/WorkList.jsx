@@ -23,8 +23,8 @@ const WorkList =({works, openPopup, closePopup, isOpen, dataId})=>{
                                 <h4 className="workName">{work.name} </h4>
                                 <p className="workDate">{work.date}</p>
                                 <ul className="workFilter">
-                                    {work.filter.map((filter, index)=>(
-                                        <FilterLi key={index}>{filter}</FilterLi>
+                                    {work.use.map((use, index)=>(
+                                        <FilterLi key={index}>{use}</FilterLi>
                                     ))}
                                 </ul>
                             </div>
