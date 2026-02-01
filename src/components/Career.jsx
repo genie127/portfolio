@@ -14,8 +14,12 @@ const Career=()=>{
                 <p className="pro_car_tt">Career</p>
                 <ul>
                     <li>
+                        <p className="date">2025.04 ~ </p>
+                        <p>시원스쿨 <span>프론트엔드파트 주임</span></p>
+                    </li>
+                    <li>
                         <p className="date">2021.04 ~ 2023.08</p>
-                        <p>파이브센스 <span>개발팀 사원</span></p>
+                        <p>파이브센스(웹 에이전시) <span>개발팀 사원</span></p>
                     </li>
                     <li>
                         <p className="date">2017.03 ~ 2018.02</p>
